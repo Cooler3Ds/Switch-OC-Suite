@@ -66,7 +66,7 @@ volatile CustomizeTable C = {
  * - Max Voltage in mV:
  *   Default voltage: 1120
  */
-.marikoCpuMaxVolt    = 1180,
+.marikoCpuMaxVolt    = 1200,
 
 /* Mariko EMC(RAM):
  * - RAM Clock in kHz:
