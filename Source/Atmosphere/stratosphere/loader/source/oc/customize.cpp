@@ -36,7 +36,7 @@ volatile CustomizeTable C = {
  *   Boost clock will be applied when applications request higher CPU frequency for quicker loading.
  *   This will be set regardless of whether sys-clk is enabled.
  */
-.commonCpuBoostClock = 1785000,
+.commonCpuBoostClock = 2295000,
 /* - EMC Vddq (Erista Only) and RAM Vdd2 Voltage in uV
  *   Range: 1100'000 to 1250'000 uV
  *   Erista Default(HOS): 1125'000 (bootloader: 1100'000)
@@ -44,7 +44,7 @@ volatile CustomizeTable C = {
  *   Value should be divided evenly by 12'500.
  *   Not enabled by default.
  */
-.commonEmcMemVolt  = 0,
+.commonEmcMemVolt  = 1200000,
 
 /* Erista CPU:
  * - Max Voltage in mV
@@ -66,7 +66,7 @@ volatile CustomizeTable C = {
  * - Max Voltage in mV:
  *   Default voltage: 1120
  */
-.marikoCpuMaxVolt    = 1235,
+.marikoCpuMaxVolt    = 1200,
 
 /* Mariko EMC(RAM):
  * - RAM Clock in kHz:
@@ -77,7 +77,7 @@ volatile CustomizeTable C = {
  *   - System instabilities
  *   - NAND corruption
  */
-.marikoEmcMaxClock = 1996800,
+.marikoEmcMaxClock = 2560000,
 /* - EMC Vddq (Mariko Only) Voltage in uV
  *   Range: 550'000 to 650'000 uV
  *   Value should be divided evenly by 5'000
@@ -85,29 +85,29 @@ volatile CustomizeTable C = {
  *   Not enabled by default.
  *   This will not work without sys-clk-OC.
  */
-.marikoEmcVddqVolt = 0,
+.marikoEmcVddqVolt = 630000,
 
 .marikoCpuUV = 0,
 
-.marikoGpuUV = 0,
+.marikoGpuUV = 3,
 
-.marikoEmcDvbShift = 0,
+.marikoEmcDvbShift = 2,
 
-.ramTimingPresetOne = 0,
+.ramTimingPresetOne = 5,
 
-.ramTimingPresetTwo = 0,
+.ramTimingPresetTwo = 3,
 
-.ramTimingPresetThree = 0,
+.ramTimingPresetThree = 5,
 
-.ramTimingPresetFour = 0,
+.ramTimingPresetFour = 5,
 
-.ramTimingPresetFive = 0,
+.ramTimingPresetFive = 5,
 
-.ramTimingPresetSix = 0,
+.ramTimingPresetSix = 5,
 
-.ramTimingPresetSeven = 0,
+.ramTimingPresetSeven = 3,
 
-.marikoGpuVoltArray = {610, 610, 610, 610, 610, 610, 610, 610, 610, 610, 620, 640, 675, 710, 735, 785, 815},
+.marikoGpuVoltArray = {640, 640, 640, 640, 640, 640, 640, 640, 640, 640, 640, 640, 675, 710, 735, 785, 815, 855},
 
 /* Advanced Settings:
  * - Erista CPU DVFS Table:
@@ -161,7 +161,7 @@ volatile CustomizeTable C = {
     { 2091000, { 1716501, -39395, 27 }, { 1235000 } },
     { 2193000, { 1775132, -40505, 27 }, { 1235000 } },
     { 2295000, { 1866287, -42005, 27 }, { 1235000 } },
-    //{ 2397000, { 1961107, -43506, 27 }, { 1235000 } },
+    { 2397000, { 1961107, -43506, 27 }, { 1235000 } },
 },
 
 .marikoCpuDvfsTableSLT = {
@@ -253,23 +253,24 @@ volatile CustomizeTable C = {
 	{ 1267200, {}, { 1308155, -13694,   -867,      0,    3681,    559 } },
 },
 .marikoGpuDvfsTableHiOPT = {
-    {   76800, {}, {  590000,                                  } }, 
-	{  153600, {}, {  590000,                                  } }, 
-	{  230400, {}, {  590000,                                  } }, 
-	{  307200, {}, {  590000,                                  } }, 
-	{  384000, {}, {  590000,                                  } }, 
-	{  460800, {}, {  590000,                                  } }, 
-	{  537600, {}, {  590000,                                  } }, 
-	{  614400, {}, {  590000,                                  } }, 
-	{  691200, {}, {  838712,  -7304, -552,  119,  -3750,   -2 } }, 
-	{  768000, {}, {  880210,  -7955, -584,    0,  -2849,   39 } }, 
-	{  844800, {}, {  926398,  -8892, -602,  -60,   -384,  -93 } }, 
-	{  921600, {}, {  970060, -10108, -614, -179,   1508,  -13 } }, 
-	{  998400, {}, { 1065665, -16075, -497, -179,   3213,    9 } }, 
-	{ 1075200, {}, { 1132576, -16093, -648,    0,   1077,   40 } }, 
-	{ 1152000, {}, { 1180029, -14534, -830,    0,   1469,  110 } }, 
-	{ 1228800, {}, { 1248293, -16383, -859,    0,   3722,  313 } },
-    { 1267200, {}, { 1286399, -17475, -867,    0,   3681,  559 } },
+    	{   76800, {},  {  610000,                                  } }, 
+    	{  153600, {},  {  610000,                                  } }, 
+    	{  230400, {},  {  610000,                                  } }, 
+    	{  307200, {},  {  610000,                                  } },
+    	{  384000, {},  {  610000,                                  } },
+    	{  460800, {},  {  610000,                                  } },
+    	{  537600, {},  {  610000,                                  } },
+    	{  614400, {},  {  610000,                                  } },
+    	{  691200, {},  {  610000,                                  } },
+    	{  768000, {},  {  801688, -10900, -163,  298, -10599,  162 } },
+    	{  844800, {},  {  824214,  -5743, -452,  238,  -6325,   81 } },
+    	{  921600, {},  {  848830,  -3903, -552,  119,  -4030,   -2 } },
+    	{  998400, {},  {  901575,  -4409, -584,    0,  -2849,   39 } },
+    	{ 1075200, {},  {  940071,  -5367, -602,  -60,    -63,  -93 } },
+    	{ 1152000, {},  {  996765,  -6637, -614, -179,   1905,  -13 } },
+    	{ 1228800, {},  { 1098475, -13529, -497, -179,   3626,    9 } },
+    	{ 1267200, {},  { 1131060, -13109, -573,  -90,   2352,   25 } },
+    	{ 1305600, {},  { 1163644, -12688, -648,    0,   1077,   40 } },
 },
 
 //.eristaMtcTable = const_cast<EristaMtcTable *>(&EristaMtcTablePlaceholder),
