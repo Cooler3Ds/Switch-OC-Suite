@@ -77,8 +77,8 @@ Result Test_PcvDvfsTable() {
 
     // Customized table default
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.eristaCpuDvfsTable)) == 19);
-    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoCpuDvfsTable)) == 22);
-    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoCpuDvfsTableSLT)) == 22);
+    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoCpuDvfsTable)) == 23);
+    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoCpuDvfsTableSLT)) == 23);
 
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.eristaGpuDvfsTable)) == 12);
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoGpuDvfsTable)) == 18);
