@@ -82,7 +82,7 @@ Result Test_PcvDvfsTable() {
 
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.eristaGpuDvfsTable)) == 12);
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoGpuDvfsTable)) == 18);
-    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoGpuDvfsTableSLT)) == 17);
+    assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoGpuDvfsTableSLT)) == 18);
     assert(GetDvfsTableEntryCount((cvb_entry_t *)(&ams::ldr::oc::C.marikoGpuDvfsTableHiOPT)) == 18);
 
     constexpr size_t limit = ams::ldr::oc::pcv::DvfsTableEntryLimit;
