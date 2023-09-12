@@ -55,7 +55,7 @@ void Clocks::UpdateFreqRange() {
     uint32_t GPU_SAFE_MAX[SysClkProfile_EnumMax];
     if (isMariko) {
         for (auto &m : GPU_SAFE_MAX) {
-            m = 1152'000'000;
+            m = 998'400'000;
         }
     } else {
         GPU_SAFE_MAX[SysClkProfile_Handheld] = \
@@ -69,7 +69,7 @@ void Clocks::UpdateFreqRange() {
         m = *gpu_max_freq;
     }
     if (isMariko) {
-        GPU_UNSAFE_MAX[SysClkProfile_Handheld] = 1152'000'000;
+        GPU_UNSAFE_MAX[SysClkProfile_Handheld] = 1075'200'000;
     } else {
         memcpy(GPU_UNSAFE_MAX, GPU_SAFE_MAX, sizeof(GPU_UNSAFE_MAX));
         GPU_UNSAFE_MAX[SysClkProfile_HandheldChargingOfficial] = \
