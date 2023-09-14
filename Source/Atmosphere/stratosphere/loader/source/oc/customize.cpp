@@ -28,7 +28,7 @@ volatile CustomizeTable C = {
  * NO_ADJ_ALL: No timing adjustment for both Erista and Mariko.
  * CUSTOMIZED_ALL: Replace with values in customized table for both Erista and Mariko.
  */
-.mtcConf = AUTO_ADJ_ALL,
+.mtcConf = CUSTOM_ADJ_ALL,
 
 /* Common:
  * - Boost Clock in kHz:
@@ -44,7 +44,7 @@ volatile CustomizeTable C = {
  *   Value should be divided evenly by 12'500.
  *   Not enabled by default.
  */
-.commonEmcMemVolt  = 1200000,
+.commonEmcMemVolt  = 1150000,
 
 /* Erista CPU:
  * - Max Voltage in mV
@@ -77,7 +77,7 @@ volatile CustomizeTable C = {
  *   - System instabilities
  *   - NAND corruption
  */
-.marikoEmcMaxClock = 2560000,
+.marikoEmcMaxClock = 2400000,
 /* - EMC Vddq (Mariko Only) Voltage in uV
  *   Range: 550'000 to 650'000 uV
  *   Value should be divided evenly by 5'000
@@ -87,15 +87,15 @@ volatile CustomizeTable C = {
  */
 .marikoEmcVddqVolt = 600000,
 
-.marikoCpuUV = 0,
+.marikoCpuUV = 1,
 
-.marikoGpuUV = 1,
+.marikoGpuUV = 2,
 
 .marikoEmcDvbShift = 2,
 
-.ramTimingPresetOne = 5,
+.ramTimingPresetOne = 4,
 
-.ramTimingPresetTwo = 3,
+.ramTimingPresetTwo = 4,
 
 .ramTimingPresetThree = 5,
 
@@ -105,7 +105,7 @@ volatile CustomizeTable C = {
 
 .ramTimingPresetSix = 5,
 
-.ramTimingPresetSeven = 3,
+.ramTimingPresetSeven = 4,
 
 .marikoGpuVoltArray = {635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 640, 675, 710, 735, 785, 795, 820},
 
@@ -232,7 +232,7 @@ volatile CustomizeTable C = {
     { 1228800, {}, { 1277303, -11675, -859,    0,   3722, 313 } },
     { 1267200, {}, { 1335531, -12567, -867,    0,   3681, 559 } },
     // Appending table
-    //{ 1305600, {}, { 1374130, -13725, -859,    0,   4442, 576 } },
+    { 1305600, {}, { 1374130, -13725, -859,    0,   4442, 576 } },
 },
 
 .marikoGpuDvfsTableSLT = {
