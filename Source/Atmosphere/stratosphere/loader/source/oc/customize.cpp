@@ -66,7 +66,7 @@ volatile CustomizeTable C = {
  * - Max Voltage in mV:
  *   Default voltage: 1120
  */
-.marikoCpuMaxVolt    = 1235,
+.marikoCpuMaxVolt    = 1160,
 
 /* Mariko EMC(RAM):
  * - RAM Clock in kHz:
@@ -107,7 +107,7 @@ volatile CustomizeTable C = {
 
 .ramTimingPresetSeven = 4,
 
-.marikoGpuVoltArray = {635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 660, 685, 715, 745, 765, 785},
+.marikoGpuVoltArray = {635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 635, 640, 675, 710, 735, 785, 795, 820},
 
 /* Advanced Settings:
  * - Erista CPU DVFS Table:
@@ -189,7 +189,7 @@ volatile CustomizeTable C = {
     { 2193000, { 1580725,   -33235,      113 }, { 1235000 } },
     { 2295000, { 1635431,   -34095,      113 }, { 1235000 } },
     { 2397000, { 1702903,   -34955,      113 }, { 1235000 } },
-    { 2500000, { 2004105,   -44938,       27 }, { 1235000 } },
+	{ 2750000, { 2004105,   -44938,      113 }, { 1235000 } },
 },
 
 /* - Erista GPU DVFS Table:
