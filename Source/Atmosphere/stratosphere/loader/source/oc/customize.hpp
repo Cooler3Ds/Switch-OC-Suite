@@ -16,7 +16,7 @@
 
 #pragma once
 
-#define CUST_REV 10
+#define CUST_REV 11
 
 #include "oc_common.hpp"
 #include "pcv/pcv_common.hpp"
@@ -54,6 +54,7 @@ typedef struct CustomizeTable {
     u32 marikoEmcVddqVolt;
     u32 marikoCpuUV;
     u32 marikoGpuUV;
+    u32 commonGpuVoltOffset;
     // advanced config
     u32 marikoEmcDvbShift;
     u32 ramTimingPresetOne;
