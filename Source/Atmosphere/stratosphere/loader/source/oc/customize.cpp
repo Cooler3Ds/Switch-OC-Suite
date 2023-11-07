@@ -93,6 +93,8 @@ volatile CustomizeTable C = {
 
 .commonGpuVoltOffset = 0,
 
+.marikoEmcDvbShift = 0,
+
 .marikoEmcDvbShift = 2,
 
 .ramTimingPresetOne = 4,
