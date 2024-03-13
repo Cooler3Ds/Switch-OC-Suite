@@ -82,18 +82,6 @@ Result CpuVoltDfll(u32* ptr) {
 			PATCH_OFFSET(&(entry->tune1_low), 0x021107FF);
 			PATCH_OFFSET(&(entry->tune1_high), 0x00000000);
         }
-		else if (C.marikoCpuUV == 3) {
-            PATCH_OFFSET(&(entry->tune0_low), 0x0000FFFF);
-			PATCH_OFFSET(&(entry->tune0_high), 0x0000FFFF);
-			PATCH_OFFSET(&(entry->tune1_low), 0x021107FF);
-			PATCH_OFFSET(&(entry->tune1_high), 0x024417FF);
-		}
-		else if (C.marikoCpuUV == 4) {
-            PATCH_OFFSET(&(entry->tune0_low), 0x0000FFFF);
-			PATCH_OFFSET(&(entry->tune0_high), 0x0000FFFF);
-			PATCH_OFFSET(&(entry->tune1_low), 0x021107FF);
-			PATCH_OFFSET(&(entry->tune1_high), 0x028817FF);
-		}
     }
 
     R_SUCCEED();
